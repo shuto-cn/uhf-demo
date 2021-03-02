@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="back()">返回</ion-button>
+  <ion-button (click)="readCard()">读卡</ion-button>
+  <p>{{readmsg}}</p>
+  <ion-input [(ngModel)]="writemsg"></ion-input>
+  <ion-button (click)="writeCard()">写卡</ion-button>
+</ion-content>
