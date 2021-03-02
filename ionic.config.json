@@ -1,7 +1,14 @@
 {
-  "name": "uhftest",
+  "name": "uhf",
   "integrations": {
+    "gulp": {},
     "cordova": {}
   },
-  "type": "angular"
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
 }
