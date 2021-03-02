@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      UHF test
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-input type="number" [(ngModel)]="power" placeholder="功率为16-26之间的整数"></ion-input>
+  <ion-button (click)="setPower()">设置功率</ion-button>
+    <ion-list>
+      <ion-item *ngFor="let card of cardlist" (click)="selectCard(card)">
+        {{card.mEpcBytes}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;次数：{{card.count}}
+      </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button *ngIf="!searchCardFlag" (click)="singleSerchCard()">单次巡卡</ion-button>
+      <ion-button *ngIf="!searchCardFlag" (click)="startSearchCard()">多次巡卡</ion-button>
+      <ion-button *ngIf="searchCardFlag" (click)="stopSerchCard()">停止巡卡</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
